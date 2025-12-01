@@ -9,6 +9,7 @@
     Город нахождения магазина
     Количество пользователей, закреплённых в этом магазине
 ## 
+```
 SELECT 
     s.last_name AS staff_last_name,
     s.first_name AS staff_first_name,
@@ -21,7 +22,7 @@ JOIN city c ON a.city_id = c.city_id
 JOIN customer cust ON st.store_id = cust.store_id
 GROUP BY st.store_id, s.staff_id, s.last_name, s.first_name, c.city
 HAVING COUNT(cust.customer_id) > 300;
-
+```
 ## Задание 2: Количество фильмов длиннее средней продолжительности
 
 SELECT COUNT(*) AS films_above_average_length
